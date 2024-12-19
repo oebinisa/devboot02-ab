@@ -56,6 +56,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```bash
 $ mysql -u root -p < schema.sql
 ```
+Subsequently, you only need to ensure that the mysql service is up and running.
 
 3. **Run the App**:
 ```bash
@@ -65,6 +66,9 @@ cd devboot02-ab
 # Create a virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows use venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 
 # Run the Flask App
 python run.py
