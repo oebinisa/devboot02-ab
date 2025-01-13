@@ -47,6 +47,7 @@ jobs:
       # Step 3: Run tests
       - name: Run Tests
         run: |
+          source venv/bin/activate
           pytest
 
       # Step 4: Package the app as a zip file
