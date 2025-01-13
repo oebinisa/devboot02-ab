@@ -51,12 +51,12 @@ jobs:
           pytest
 
       # Step 4: Package the app as a zip file
-      - name: Create Artifact
+      - name: Create artifact
         run: |
           timestamp=$(date +'%Y%m%d%H%M%S')
-          zip -r address-book-python-$timestamp.zip
+          zip -r address-book-python-$timestamp.zip .
         env:
-            TIMESTAMP: ${{ github.run_id }}
+          TIMESTAMP: ${{ github.run_id }}
 
       - name: Set TIMESTAMP
         run: echo "TIMESTAMP=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
