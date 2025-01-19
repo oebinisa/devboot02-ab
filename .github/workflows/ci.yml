@@ -92,7 +92,7 @@ jobs:
           curl -s --user "api:${{ secrets.MAILGUN_API_KEY }}" \
           https://api.mailgun.net/v3/devforge.cc/messages \
           -F from="CI Pipeline <mailgun@devforge.cc>" \
-          -F to="o.oluwapelumi@gmail.com, faithskool4u@gmail.com" \
+          -F to="o.oluwapelumi@gmail.com, akinyemimosolasi@gmail.com, ibrahimbello349@gmail.com" \
           -F subject="CI Pipeline Status: Success" \
           -F text="The build artifact has been successfully created and uploaded to S3." \
           -w "\nHTTP Status Code: %{http_code}\n"
@@ -104,7 +104,7 @@ jobs:
             curl -s --user "api:${{ secrets.MAILGUN_API_KEY }}" \
             https://api.mailgun.net/v3/devforge.cc/messages \
             -F from="CI Pipeline <mailgun@devforge.cc>" \
-            -F to="o.oluwapelumi@gmail.com" \
+            -F to="o.oluwapelumi@gmail.com, akinyemimosolasi@gmail.com, ibrahimbello349@gmail.com" \
             -F subject="CI Pipeline Status: Failure" \
             -F text="The CI pipeline has failed. Please check the logs."
 
